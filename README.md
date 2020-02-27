@@ -11,10 +11,6 @@ It contains,
 * Item is dragable and dropable to any other tab
 * Tab count gets updated after drop
 
-## During execution 
-
-![edit dropdown screenshot](https://raw.githubusercontent.com/Mazzzy/editable-dropdown/master/assets/editable-dropdown.png)
-
 ## Application
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
