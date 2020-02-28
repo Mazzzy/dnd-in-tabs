@@ -1,5 +1,5 @@
-import React from "react";
-import { getTabData } from "./data-generator";
+import React from 'react';
+import { getTabData } from '../../data/faker-data-generator';
 
 function TabContent({ activeTab }) {
   const [data, setData] = React.useState([]);
@@ -11,16 +11,16 @@ function TabContent({ activeTab }) {
 
   
   return (
-    <div>
-      <h1>{activeTab.name}</h1>
+    <div className='tab-content'>
+      <h4>{activeTab.name}</h4>
       {data.map((value, index) => (
-        <div key={index}>
-          <div>{value.name}</div>
-          <div>{value.email}</div>
-          <div>{value.username}</div>
-          <div>{value.phone}</div>
-          <div>{value.website}</div>
-        </div>
+        <ul key={index} className='content-list'>
+          <li>{value.name}</li>
+          <li>{value.email}</li>
+          <li>{value.username}</li>
+          <li>{value.phone}</li>
+          <li>{value.website}</li>
+        </ul>
       ))}
     </div>
   );

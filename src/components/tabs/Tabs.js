@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Tab from './Tab';
+import './Tabs.css';
 
 function Tabs({ tabs, render, firstTab }) {
     const [activeTab, setActiveTab] = React.useState();
