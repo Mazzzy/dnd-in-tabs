@@ -2,7 +2,9 @@
 
 This application demonstrates the drag and drop items feature across muliple tabs.
 
-Library used: [React DnD](https://react-dnd.github.io/react-dnd/about).
+Library used: 
+* [React DnD](https://react-dnd.github.io/react-dnd/about).
+* [Faker.js](https://github.com/Marak/Faker.js).
 
 It contains,
 * Tabs that gets generated dynamically
