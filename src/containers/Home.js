@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { DndProvider } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 import Tabs from '../components/tabs/Tabs';
 import TabContent from '../components/tabs/TabContent';
@@ -16,7 +18,8 @@ function Home() {
   }, []);
 
   return (
-    <div className='tabs-container'>
+    <DndProvider backend={HTML5Backend}>
+      <div className='tabs-container'>
         <Tabs
           tabs={tabs}
           render={activeTab => {
@@ -24,7 +27,8 @@ function Home() {
           }}
           firstTab={firstTab}
         />
-    </div>
+      </div>
+    </DndProvider>
   );
 }
 
