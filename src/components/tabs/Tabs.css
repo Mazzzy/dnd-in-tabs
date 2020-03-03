@@ -13,6 +13,11 @@
     transition: transform color 0.3s;
 }
 
+.tab-item-dropped {
+    transform: scale(1.2);
+    color: gray;
+}
+
 .tab-list-active {
     pointer-events: none;
     background-color: white;
@@ -33,6 +38,7 @@
 .tab-content .content-list {
     display: flex;
     padding: 0;
+    cursor: pointer;
 }
 
 .content-list li {

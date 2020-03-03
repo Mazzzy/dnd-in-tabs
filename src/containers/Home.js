@@ -11,11 +11,25 @@ import './Home.css';
 function Home() {
   const [tabs, setTabs] = React.useState([]);
   const [firstTab, setFirstTab] = React.useState();
+
   useEffect(() => {
     const tabs = getTabs();
     setTabs(tabs);
     setFirstTab(tabs[0]);
   }, []);
+
+  const updateTabCounts = (activeTab, newTab) => {
+    const updatedTabs = tabs.map(tab => {
+      if (tab.name === activeTab) {
+        return { ...tab, count: tab.count - 1 };
+      }
+      if (tab.name === newTab) {
+        return { ...tab, count: tab.count + 1 };
+      }
+      return tab;
+    });
+    setTabs(updatedTabs);
+  };
 
   return (
     <DndProvider backend={HTML5Backend}>
@@ -26,6 +40,7 @@ function Home() {
             return <TabContent activeTab={activeTab} />;
           }}
           firstTab={firstTab}
+          updateTabCounts={updateTabCounts}
         />
       </div>
     </DndProvider>
